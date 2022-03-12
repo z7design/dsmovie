@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import axios from "axios";
 import MovieCard from "components/MovieCard";
 import Pagination from "components/Pagination";
@@ -21,7 +22,7 @@ function Listing() {
         });
 
     useEffect(() => {
-        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}%sort=id`)
+        axios.get(`${BASE_URL}/movies?size=12&page=${pageNumber}%sort=title`)
     .then(response => {
         const data = response.data as MoviePage;
            setPage(data); 
